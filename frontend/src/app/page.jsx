@@ -23,7 +23,13 @@ const Register = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setUser({ ...user, [name]: value });
+        // industryフィールドの値を設定する際に、IndustrySelectBox配列の各オブジェクトのvalueプロパティを使用する
+        if (name === 'industry') {
+            const selectedIndustry = IndustrySelectBox.find(item => item.value === value);
+            setUser({ ...user, [name]: selectedIndustry ? selectedIndustry.value : value });
+        } else {
+            setUser({ ...user, [name]: value });
+        }
     };
 
     const register = async (userInfo) => {
