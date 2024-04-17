@@ -1,12 +1,14 @@
 import React from "react";
+import RecommendTop from './RecommendTop';
 
 const Recommend = () => {
 
   return (
-    <>
-      <h1>ここにレコメンド画面</h1>
-    </>
-  );
+    <div className='flex-1'>
+      <div className='my-4 items-center justify-between mx-auto max-w-4xl'>
+        <RecommendTop />
+      </div>
+    </div>);
 };
 
 export default Recommend;
