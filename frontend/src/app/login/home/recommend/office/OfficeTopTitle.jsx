@@ -8,7 +8,7 @@ const OfficeTopTitle = () => {
                 <h1>レコメンド</h1>
                 <div>デスク</div>
             </div>
-            <Link href={"/recommend"} className='m-4 hover:underline'>
+            <Link href={"/login/home/recommend"} className='m-4 hover:underline'>
                 <div>戻る
                 </div>
             </Link>
