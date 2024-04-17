@@ -5,14 +5,14 @@ class User(Base):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)
-    company = Column(String(120), unique=True, index=True)
-    username = Column(String(120), unique=True, index=True)
-    address = Column(String(120), unique=True, index=True)
-    phonenumber = Column(String(120), unique=True, index=True)
-    email = Column(String(120), unique=True, index=True)
+    company = Column(String)
+    username = Column(String)
+    address = Column(String)
+    phonenumber = Column(String)
+    email = Column(String)
     hashed_password = Column(String)
-    industry = Column(String(120), unique=True, index=True)
-    employees = Column(String(120), unique=True, index=True)
+    industry = Column(String)
+    employees = Column(String)
 
 class Answer(Base):
     __tablename__ = "answers"
