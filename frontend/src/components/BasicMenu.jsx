@@ -5,6 +5,8 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import Logo from "./kaguya_logo.png";
 
 export default function BasicMenu() {
   const router = useRouter(); // useRouterフックを使用
@@ -26,6 +28,9 @@ export default function BasicMenu() {
 
   return (
     <div>
+      {/* <div className='m-2'>
+        <Image src={Logo} alt="logo"/>
+      </div> */}
       <Button
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
