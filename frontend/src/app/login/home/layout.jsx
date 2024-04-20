@@ -1,10 +1,13 @@
 import Header from "../../../components/Header";
+import { ShopContextProvider } from '../../../context/shop-context'
 
 export default function Layout({children}) {
   return (
       <>
-        <Header />
-        {children} 
+        <ShopContextProvider>
+          <Header />
+          {children}
+        </ShopContextProvider> 
       </>
       
   );
